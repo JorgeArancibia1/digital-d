@@ -8,8 +8,10 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"eslint": "npx eslint",
-		"lint": "npx eslint .",
+		"format": "prettier --write src",
+		"lint": "eslint src --max-warnings=0",
+		"lint:critic": "eslint src --max-warnings=0",
+		"lint:fix": "npm run lint -- --fix",
 		"prettier": "npx prettier --write .",
 		"prepare": "husky install"
 	},
