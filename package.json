@@ -2,17 +2,20 @@
 	"name": "digital-a",
 	"type": "module",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "prettier --write src",
-		"lint": "eslint src --max-warnings=0",
+		"test": "set CI=true && react-scripts test --coverage --detectOpenHandles  --watchAll=false",
+		"lint": "eslint src",
 		"lint:critic": "eslint src --max-warnings=0",
 		"lint:fix": "npm run lint -- --fix",
-		"prettier": "npx prettier --write .",
+		"format": "prettier --write .",
+		"prettier:check": "prettier --check .",
+		"prettier:write": "prettier --write ./src",
 		"prepare": "husky install"
 	},
 	"dependencies": {
@@ -30,5 +33,15 @@
 	},
 	"lint-staged": {
 		"*.js": "eslint --cache --fix"
+	},
+	"jest": {
+		"coveragePathIgnorePatterns": [
+			"node_modules",
+			"src/(styles|api|theme)",
+			"models",
+			".stories.*",
+			"__mock__",
+			"hooks"
+		]
 	}
 }
