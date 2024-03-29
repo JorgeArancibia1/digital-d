@@ -15,6 +15,9 @@ export default {
           "100%": { "background-position": "100% 100%" },
         },
       },
+      minWidth: {
+        '1/3': '33%',
+      },
     },
   },
   plugins: [],

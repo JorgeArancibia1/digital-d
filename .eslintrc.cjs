@@ -21,7 +21,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: [ '@typescript-eslint' ],
-	ignorePatterns: [ 'temp.js', '*/vendor/.js', 'env.d.ts', '.eslintrc.cjs'],
+	ignorePatterns: [ 'temp.js', '*/vendor/.js', 'env.d.ts', '.eslintrc.cjs', 'astro.config.mjs', 'tailwind.config.mjs'],
 	rules: {
 		// "key-spacing": ["error", { "beforeColon": false,"afterColon": false, "mode": "false" }],
 		// "space-in-parens": ["error", "always"],

@@ -1,22 +1,19 @@
-<ul>
+---
+import type { menuItem } from '../interfaces';
+import MenuItemView from './MenuItemView.astro';
+
+interface Props{
+    items:menuItem[];
+}//toma las propiedades de menu item
+
+const { items }= Astro.props;
+---
+
+<div class="p-0 mt-5 mx-0 mb-0 flex gap-4 w-auto sm:w-1/3 z-50 absolute bg-gradient-to-r from-gray-700  to-transparent " >
+    {
+        items.map(item => <MenuItemView {...item}/> )
+    }
+
     <slot/>
 
-</ul>
-<style>
-    ul{
-        padding:  0;
-        margin: 20px 0 0 0;
-        display: flex;
-        gap: 1rem;
-        width: 33%;
-        z-index: 100;
-        position: absolute;
-        /* margin-bottom: -108px; */
-        background: Linear-gradient(
-            90deg,
-            rgba(23, 47, 73, 0.5),
-            rgba(23, 47, 73, 0.5) 58%,
-            rgba(23, 47, 73, 0)
-            );
-    }
-</style>
+</div>
