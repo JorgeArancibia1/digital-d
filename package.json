@@ -1,47 +1,51 @@
 {
-	"name": "digital-a",
-	"type": "module",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"test": "set CI=true && react-scripts test --coverage --detectOpenHandles  --watchAll=false",
-		"lint": "eslint src",
-		"lint:critic": "eslint src --max-warnings=0",
-		"lint:fix": "npm run lint -- --fix",
-		"format": "prettier --write .",
-		"prettier:check": "prettier --check .",
-		"prettier:write": "prettier --write ./src",
-		"prepare": "husky install"
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.5.10",
-		"astro": "^4.5.10",
-		"typescript": "^5.4.3"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^7.4.0",
-		"@typescript-eslint/parser": "^7.4.0",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2"
-	},
-	"lint-staged": {
-		"*.js": "eslint --cache --fix"
-	},
-	"jest": {
-		"coveragePathIgnorePatterns": [
-			"node_modules",
-			"src/(styles|api|theme)",
-			"models",
-			".stories.*",
-			"__mock__",
-			"hooks"
-		]
-	}
+  "name": "digital-a",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "set CI=true && react-scripts test --coverage --detectOpenHandles  --watchAll=false",
+    "lint": "eslint",
+    "lint:critic": "eslint --max-warnings=0",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write ./src",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.10",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.33.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "src/(styles|api|theme)",
+      "models",
+      ".stories.*",
+      "__mock__",
+      "hooks"
+    ]
+  }
 }
