@@ -1,11 +1,14 @@
 ---
 import type { menuItem } from '../interfaces';
 
-interface Props extends menuItem{
-}//toma las propiedades de menu items
+interface Props extends menuItem {} //toma las propiedades de menu items
 
-const { title, url }= Astro.props;
+const { title, url } = Astro.props;
 ---
-<li class="list-none">
-    <a class="text-xl text-black flex py-8 px-5 items-center duration-300 ease-in-out hover:text-slate-200 hover:scale-110" href={url}>{title}</a>
+
+<li class='list-none'>
+	<a
+		class='text-xl text-black flex py-8 px-5 items-center duration-300 ease-in-out hover:text-slate-200 hover:scale-110'
+		href={url}>{title}
+    </a>
 </li>
