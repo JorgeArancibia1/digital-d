@@ -5,6 +5,8 @@ import HomeInfo from '../components/HomeInfo.astro';
 import FormContact from '../components/FormContact.astro';
 import Card from '../components/CardContainer.astro';
 import cardItems from '../data/cardItems';
+import Footer from '../components/Footer.astro';
+
 ---
 
 <Layout title="Digital Web.">
@@ -12,6 +14,7 @@ import cardItems from '../data/cardItems';
   <HomeInfo />
   <Card cards={cardItems} />
   <FormContact />
+	<Footer/>
 </Layout>
 
 <style>
