@@ -1,0 +1,44 @@
+---
+if (Astro.request.method === "POST") {
+	try {
+			const data = await Astro.request.formData();
+			const nombre = data.get("nombre");
+			const email = data.get("email");
+			const telefono = data.get("telefono");
+			const mensaje = data.get("mensaje");
+	} catch (error) {
+			if (error instanceof Error) {
+			console.error(error.message);
+			}
+	}
+	}
+	---
+	<div class="bg-white max-w-[120rem] w-[95%] my-0 mx-auto">
+			<main class="w-[95%] mx-auto my-8 max-w-[800px]">
+					<h2 class="text-4xl text-center pt-5">Llena el formulario de Contacto</h2>
+					<form class="py-5 " method="POST" data-netlify="true">
+							<fieldset>
+									<legend class="text-gray-400 text-3xl py-3">
+										Contactanos
+									</legend>
+									<label class="block uppercase font-bold" for="nombre">
+										Nombre:
+									</label>
+									<input class="p-4 block w-full bg-gray-100 mb-8 border-none rounded-lg" type="text" name="nombre" placeholder="Nombre" required >
+									<label class="block uppercase font-bold" for="email">
+										E-mail:
+									</label>
+									<input class="p-4 block w-full bg-gray-100 mb-8 border-none rounded-lg" type="email" name="email" placeholder="Correo electrónico" required>
+									<label class="block uppercase font-bold" for="telefono">
+										Teléfono:
+									</label>
+									<input class="p-4 block w-full bg-gray-100 mb-8 border-none rounded-lg" type="tel" name="telefono" placeholder="Teléfono" required>
+									<label class="block uppercase font-bold" for="mensaje">
+										Mensaje:
+									</label>
+									<textarea class="p-4 block w-full bg-gray-100 mb-8 border-none rounded-lg h-80" name="mensaje"></textarea>
+							</fieldset>
+							<input type="submit" value="Enviar" class="text-white font-bold no-underline text-3xl px-12 py-4 mt-12 text-center border-none block bg-green-500 rounded-md duration-300 ease-in-out hover:scale-110">
+					</form>
+			</main>
+	</div>

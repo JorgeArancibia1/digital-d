@@ -1,0 +1,16 @@
+---
+import type { cardItem } from '../interfaces/cardInterface';
+
+interface Props extends cardItem {
+}
+const{title, img, description}=Astro.props;
+---
+<div class="border border-solid border-gray-400 bg-white mb-8 md:flex-none md:w-[calc(33.3%-1rem)] rounded-b">
+		<img src={img} alt={title}>
+		<div class="contenido-card mx-6 mt-5 ">
+			<h3>{title}</h3>
+			<p>{description}</p>
+		</div>
+		<a href="/" class="text-white font-bold no-underline text-3xl px-12 py-4 mt-12 text-center border-none block bg-slate-500 duration-300 ease-in-out hover:text-white hover:scale-105 rounded-b">Ver Ejemplo</a>
+</div>
+
