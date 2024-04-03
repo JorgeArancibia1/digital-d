@@ -2,18 +2,17 @@
 import type { menuItem } from '../interfaces';
 import MenuItemView from './MenuItemView.astro';
 
-interface Props{
-    items:menuItem[];
-}//toma las propiedades de menu item
+interface Props {
+  items: menuItem[];
+} //toma las propiedades de menu item
 
-const { items }= Astro.props;
+const { items } = Astro.props;
 ---
 
-<div class="p-0 mt-5 mx-0 mb-0 flex gap-4 w-auto sm:w-[33%] z-50 absolute bg-gradient-to-r from-gray-700  to-transparent " >
-    {
-        items.map(item => <MenuItemView {...item}/> )
-    }
+<div
+  class="p-0 mt-5 mx-0 mb-0 flex gap-4 w-auto sm:w-[33%] z-50 absolute bg-gradient-to-r from-gray-700 to-transparent"
+>
+  {items.map((item) => <MenuItemView {...item} />)}
 
-    <slot/>
-
+  <slot />
 </div>
