@@ -1,4 +1,4 @@
-export interface menuItem{
-    title: string;
-    url: string;
+export interface menuItem {
+  title: string;
+  url: string;
 }
