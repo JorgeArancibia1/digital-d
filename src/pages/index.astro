@@ -6,13 +6,23 @@ import FormContact from '../components/FormContact.astro';
 import Card from '../components/CardContainer.astro';
 import cardItems from '../data/cardItems';
 import Footer from '../components/Footer.astro';
+import Form from '../components/FormContacto.jsx';
+import { SectionForm } from '../components/SectionForm';
+import TitleDescription from '../components/TitleDescription.astro';
 ---
 
 <Layout title="Digital Web.">
   <Hero />
   <HomeInfo />
   <Card cards={cardItems} />
-  <FormContact />
+  <TitleDescription
+    color1="from-slate-400"
+    color2="via-blue-300"
+    color3="to-slate-500"
+    title="HABLANOS DE TU PROYECTO"
+    description="No esperes más para que tu proyecto web se haga realidad. Contáctanos hoy y comencemos a dar vida a tu visión digital."
+  />
+  <SectionForm client:load />
   <Footer />
 </Layout>
 

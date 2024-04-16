@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  color1?: string;
+  color2?: string;
+  color3?: string;
+}
+const { title, description, color1, color2, color3 } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center pb-10 max-w-[120rem] w-[70%] my-0 mx-auto"
+>
+  <h3
+    class={`text-transparent bg-gradient-to-r ${color1} ${color2} ${color3} bg-clip-text text-4xl font-black pb-6`}
+  >
+    {title}
+  </h3>
+  <p>{description}</p>
+</div>
