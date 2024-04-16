@@ -19,7 +19,7 @@ export const SectionForm = () => {
     <>
       <DropDownButton
         titleButton={isShow ? 'Ocultar' : 'Contactanos'}
-        clase="bg-white w-[390px] h-[75px] rounded-t-xl my-0 mx-auto pb-0 flex justify-center"
+        clase="bg-white w-[390px] h-[90px] rounded-t-xl my-0 mx-auto flex justify-center"
         setIsShow={setIsShow}
         isShow={isShow}
       />

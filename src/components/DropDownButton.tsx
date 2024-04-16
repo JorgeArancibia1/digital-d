@@ -13,8 +13,8 @@ export const DropDownButton = (props: Props) => {
 
   return (
     <button className={clase} onClick={() => setIsShow(!isShow)}>
-      <div className="flex flex-col items-center">
-        <div>{titleButton}</div>
+      <div className="flex flex-col items-center my-3">
+        <div className='text-2xl'>{titleButton}</div>
         <div>{isShow ? <ChevronUp /> : <ChevronDown />}</div>
       </div>
     </button>
