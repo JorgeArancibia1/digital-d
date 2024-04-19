@@ -2,16 +2,16 @@ import type { menuItem } from '../interfaces';
 
 const menuItems: menuItem[] = [
   {
-    title: 'Inicio',
+    title: 'Home',
     url: '/',
   },
   {
-    title: 'Nosotros',
-    url: '/Nosotros',
+    title: 'Proyectos',
+    url: '/Proyectos',
   },
   {
-    title: 'Contactanos',
-    url: '/Contactanos',
+    title: 'About Us',
+    url: '/About Us',
   },
 ];
 
